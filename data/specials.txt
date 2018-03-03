@@ -1,0 +1,7 @@
+Sunday,Closed,0
+Monday,Meat Loaf,8.95
+Tues,Fried Chicken,7.50
+Wednesday,Roast Beef,8.25
+Thursday,Soup and Salad, 5.95
+Friday,Fish & Chips, 8.00
+Saturday,Closed,0
