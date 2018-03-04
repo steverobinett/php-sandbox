@@ -21,7 +21,7 @@
     ?>
   </div>
   <?php
-    echo "<p>The date/time is $dateString hours</p>";
+    echo "<p>The date/time is $dateString </p>";
   ?>
 
   <table id="menu">
@@ -43,7 +43,7 @@
 
         // Get next rec and load in array
         $menu = fgetcsv($menuFile);
-      
+
      }
 
      echo date_default_timezone_get();
