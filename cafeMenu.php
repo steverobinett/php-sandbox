@@ -17,7 +17,7 @@
       $menuFile = fopen("data/specials.txt", "r");
 
       // priming read
-      $menu = fgetcsv($menuFile);
+      $menu = fgetcsv($menuFile );
     ?>
   </div>
   <?php
