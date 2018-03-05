@@ -51,7 +51,7 @@
 
   </table>
   <div class="foot">
-    <p>Steve's Cafe is happy to offer free wi-fi </p>
+    <p>Steve's Cafe is happy to offer free wi-fi to all </p>
 
   </div>
 </body>
