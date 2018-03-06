@@ -2,6 +2,10 @@
 Steve is a git user 
 fran was here
 fran was here again
+<<<<<<< HEAD
 steves
 New text on sunday
 Another
+=======
+steve added new comment from his office machine
+>>>>>>> fbcf0e95516ead907d15f4e0eea011a88669b394
