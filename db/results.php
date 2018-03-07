@@ -6,27 +6,21 @@
 <body>
   <h1>Book-O-Rama Search Results</h1>
   <?php
-    // create short variable names
-    $searchtype=$_POST['searchtype'];
-    $searchterm="%{$_POST['searchterm']}%";
 
-    if (!$searchtype || !$searchterm) {
-       echo '<p>You have not entered search details.<br/>
-       Please go back and try again.</p>';
-       exit;
-    }
+
+
 
     // whitelist the searchtype
-    switch ($searchtype) {
-      case 'Title':
-      case 'Author':
-      case 'ISBN':   
-        break;
-      default: 
-        echo '<p>That is not a valid search type. <br/>
-        Please go back and try again.</p>';
-        exit; 
-    }
+    // switch ($searchtype) {
+    //   case 'Title':
+    //   case 'Author':
+    //   case 'ISBN':
+    //     break;
+    //   default:
+    //     echo '<p>That is not a valid search type. <br/>
+    //     Please go back and try again.</p>';
+    //     exit;
+    // }
 
     $db = new mysqli('localhost', 'bookorama', 'bookorama123', 'books');
     if (mysqli_connect_errno()) {
@@ -37,10 +31,10 @@
 
     $query = "SELECT ISBN, Author, Title, Price FROM Books WHERE $searchtype = ?";
     $stmt = $db->prepare($query);
-    $stmt->bind_param('s', $searchterm);  
+    $stmt->bind_param('s', $searchterm);
     $stmt->execute();
     $stmt->store_result();
-  
+
     $stmt->bind_result($isbn, $author, $title, $price);
 
     echo "<p>Number of books found: ".$stmt->num_rows."</p>";
