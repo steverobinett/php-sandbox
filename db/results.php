@@ -22,7 +22,7 @@
     //     exit;
     // }
 
-    $db = new mysqli('localhost', 'bookorama', 'bookorama123', 'books');
+    $db = new mysqli('localhost', 'CSCI213', 'Linux2018', 'books');
     if (mysqli_connect_errno()) {
        echo '<p>Error: Could not connect to database.<br/>
        Please try again later.</p>';
