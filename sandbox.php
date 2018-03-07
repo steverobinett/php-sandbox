@@ -16,7 +16,7 @@
 require('php/MenuItem.php');
 //Class example
 
-$m = new MenuItem('Steve Burger', 'A bit greasy, but ...', 5.25);
+$m = new MenuItem('Steve Burger', 'A bit greasy, but kinda fun ...', 5.25);
 // echo 'In the menu item '.$m->itemName.'<br/>';
 // echo 'In the menu item '.$m->itemDescr.'<br/>';
 // echo 'In the menu item '.$m->itemPrice.'<br/>';

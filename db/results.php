@@ -22,17 +22,26 @@
     //     exit;
     // }
 
-    $db = new mysqli('localhost', 'CSCI213', 'Linux2018', 'books');
+    // host, username , password, dbname
+    $db = new mysqli( 'db715378838.db.1and1.com', 'dbo715378838', 'Linux2018', 'db715378838');
     if (mysqli_connect_errno()) {
        echo '<p>Error: Could not connect to database.<br/>
+
        Please try again later.</p>';
+       echo 'Status is '.mysqli_connect_errno().'<br/>';
        exit;
     }
+    else{
+      echo 'DB Connect OK. Status is '.mysqli_connect_errno().'<br/>';
+    }
+  //  $query = "SELECT ISBN, Author, Title, Price FROM Books";
+      $query = "SELECT * FROM Books";
 
-    $query = "SELECT ISBN, Author, Title, Price FROM Books WHERE $searchtype = ?";
+    // $query = "SELECT ISBN, Author, Title, Price FROM Books WHERE $searchtype = ?";
     $stmt = $db->prepare($query);
-    $stmt->bind_param('s', $searchterm);
+  //  $stmt->bind_param('s', $searchterm);
     $stmt->execute();
+      echo 'Status is '.mysqli_connect_errno().'<br/>';
     $stmt->store_result();
 
     $stmt->bind_result($isbn, $author, $title, $price);
